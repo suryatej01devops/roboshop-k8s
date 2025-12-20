@@ -2,14 +2,10 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: roboshop-dev
-  region: us-east-1
-
+    name: roboshop-dev
+    region: us-east-1
 managedNodeGroups:
   - name: roboshop-dev
-    instanceType: t3.small
-    desiredCapacity: 2
-    minSize: 2
-    maxSize: 2
-    spot: false
-
+    instanceTypes: ["t3.small", "t3.medium","t3.micro"]
+    desiredCapacity: 2 #  by default this value is 3
+    spot: true
