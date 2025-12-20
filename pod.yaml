@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod 
 metadata:
   name: nginx-pod
-  namespace : roboshop-dev
+  namespace : roboshop
   labels:
     app: nginx
 spec:
