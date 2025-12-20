@@ -20,6 +20,6 @@ spec:
           memory: "128Mi"
     env :
     - name: course
-      duration: "120hours"
+      value: "120hours"
      
         
