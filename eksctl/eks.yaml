@@ -3,10 +3,13 @@ kind: ClusterConfig
 
 metadata:
   name: roboshop-dev
-  region: us-east-2
+  region: us-east-1
 
 managedNodeGroups:
   - name: roboshop-dev
     instanceType: t3.small
-    desiredCapacity: 3
+    desiredCapacity: 2
+    minSize: 2
+    maxSize: 2
     spot: false
+
