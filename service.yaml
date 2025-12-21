@@ -4,6 +4,7 @@ metadata:
   name: nginx
 spec:
   selector:
+    name: nginx-pod
     project: roboshop
     component: frontend
     environment: dev
