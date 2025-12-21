@@ -5,9 +5,9 @@ metadata:
 spec:
   selector:
     project: roboshop
-    components: frontend
+    component: frontend
     envirnoment: dev
   ports:
     protocol: tcp
     port: 80
-    targetPort: 9376 
+    targetPort: 80  
