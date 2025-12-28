@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+  labels:
+  # these are replica set lebels
+    purpose: rs-demo
+    project: robsohop
+spec: 
+  replicas: 2
+  selector:
+  # these labels are used to select pods
+    matchlabels:
+      purpose: rs-demo
+      project: robsohop
+  # pod definition
+  template:
+    metadata:
+      labels:
+        purpose: rs-demo
+        project: robsohop 
+      spec:
+        containers:
+        - name: nginx
+          image: nginx
+
