@@ -5,22 +5,22 @@ metadata:
   labels:
   # these are replica set lebels
     purpose: rs-demo
-    project: robsohop
+    project: roboshop
 spec: 
   replicas: 2
   selector:
   # these labels are used to select pods
-    matchlabels:
+    matchLabels:
       purpose: rs-demo
-      project: robsohop
+      project: roboshop
   # pod definition
   template:
     metadata:
       labels:
         purpose: rs-demo
-        project: robsohop 
-      spec:
-        containers:
-        - name: nginx
-          image: nginx:latest
+        project: roboshop 
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
 
