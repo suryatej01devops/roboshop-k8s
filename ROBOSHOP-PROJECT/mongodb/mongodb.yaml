@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
-  namespace: rb-dev
+  namespace: roboshop
+  # these are replica set labels
   labels:
-  # these are replica set lebels
     project: roboshop
     component: mongodb
     tier: db
-spec: 
+spec:
   replicas: 1
   selector:
-  # these labels are used to select pods
+    # these labels are used to select pods
     matchLabels:
       project: roboshop
       component: mongodb
@@ -22,8 +22,34 @@ spec:
       labels:
         project: roboshop
         component: mongodb
-        tier: db 
+        tier: db
     spec:
       containers:
       - name: mongodb
-        image: suryatej01/mongodb
+        image: joindevops/mongodb:v1
+        imagePullPolicy: Always
+        readinessProbe:
+          tcpSocket:
+            port: 27017
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: 27017
+          initialDelaySeconds: 15
+          periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  namespace: roboshop
+spec:
+  selector:
+    project: roboshop
+    component: mongodb
+    tier: db
+  ports:
+    - protocol: TCP
+      port: 27017 # service port
+      targetPort: 27017 # container port
