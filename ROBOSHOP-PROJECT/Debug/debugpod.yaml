@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata: 
   name: debug-pod
-  namespace: roboshop-dev
+  namespace: roboshop
   labels:
     name : debug-pod
     project: roboshop
