@@ -1,1 +1,13 @@
+apiVersion: app/v1
+kind: Pod
+metadata: 
+  name: debug-pod
+  namespace: roboshop-dev
+  labels:
+    name : debug-pod
+    project: roboshop
+spec: 
+  containers: 
+    name : debug 
+    image : suryatej01/debug
 
