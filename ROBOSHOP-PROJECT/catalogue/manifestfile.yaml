@@ -59,12 +59,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: catalogue
+  namespace: roboshop
 spec:
   selector:
     project: roboshop
-    component: frontend
-    envirnoment: dev
+    component: catalogue
+    tier: backend
   ports:
     - protocol: TCP
       port: 8080
