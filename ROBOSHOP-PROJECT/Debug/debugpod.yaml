@@ -10,5 +10,5 @@ spec:
   containers: 
   - name : debug 
     image : suryatej01/debug:latest
-    imagePullPolicy: "always" 
+    imagePullPolicy: Always 
 
