@@ -1,5 +1,5 @@
 appVersion: v1
-kind: configMap
+kind: ConfigMap
 metadata: 
   name: catalogue
   namespace: roboshop
