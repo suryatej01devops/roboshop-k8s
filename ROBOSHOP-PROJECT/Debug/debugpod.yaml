@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: debug
-        image: suryatej01/debug:latest
+        image: suryatej01/debug:v2
         imagePullPolicy: IfNotPresent
 # spec → template → spec → containers
