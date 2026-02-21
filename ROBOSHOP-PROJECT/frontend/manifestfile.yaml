@@ -28,9 +28,6 @@ spec:
       - name: frontend
         image: suryatej01/frontend:v1
         imagePullPolicy: Always
-        envFrom:
-        - configMapRef:
-            name: frontend
         ports:
         - name: liveness-port
           containerPort: 8080
