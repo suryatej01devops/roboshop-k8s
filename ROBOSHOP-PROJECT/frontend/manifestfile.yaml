@@ -30,7 +30,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - name: liveness-port
-          containerPort: 8080
+          containerPort: 80
         readinessProbe:
           httpGet:
             path: /
@@ -57,5 +57,5 @@ spec:
     tier: frontend
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 80
+      targetPort: 80
