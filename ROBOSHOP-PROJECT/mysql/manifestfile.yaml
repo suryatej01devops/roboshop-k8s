@@ -39,14 +39,6 @@ spec:
             port: 3306
           initialDelaySeconds: 60
           periodSeconds: 5
-        volumeMounts:
-          - name: mysql-config
-            mountPath: /etc/mysql/conf.d/my.cnf
-            subPath: my.cnf
-      volumes:
-        - name: mysql-config
-          configMap:
-            name: mysql
 ---
 apiVersion: v1
 kind: Service
