@@ -10,8 +10,9 @@ spec:
     volumeMounts:
     - mountpath: /var/log/nginx
       name: nginix-logs  
+      
   - name: almalinux
-    image: almalinux: 9
+    image: almalinux:9
     command: [" sleep" ,"1000"]
     volumeMounts:
       - mountPath: /mnt/nginix-logs
