@@ -7,7 +7,7 @@ spec:
   - ReadWriteOnce
   capacity:
     storage: 15Gi
-  persistentVolumeClaimPolicy: Retain 
+  persistentVolumeReclaimPolicy: Retain
   #retain menas dont delete the data,delete means delete data and disk ,recycle means delete the data dont delete the disk
   csi:
     driver: ebs.csi.aws.com
