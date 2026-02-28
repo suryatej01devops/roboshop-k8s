@@ -5,10 +5,10 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
-  persistentVolumeClaimPolicy: retain 
-  #retain menas dont delete the data,delete means delete data and disk ,recycle means delete the data dont delete the disk
   capacity:
     storage: 15Gi
+  persistentVolumeClaimPolicy: Retain 
+  #retain menas dont delete the data,delete means delete data and disk ,recycle means delete the data dont delete the disk
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
