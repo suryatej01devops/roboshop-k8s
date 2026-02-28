@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: test-pv
+  name: ebs-static
 spec:
   accessModes:
   - ReadWriteOnce
@@ -11,4 +11,4 @@ spec:
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-03c604538dd7d2f41
+    volumeHandle: vol-06a436adda4f601e3
