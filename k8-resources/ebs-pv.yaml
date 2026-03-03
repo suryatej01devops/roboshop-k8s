@@ -25,7 +25,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 5Gi
+      storage: 15Gi
 ---
 apiVersion: v1
 kind: Pod
@@ -34,7 +34,7 @@ metadata:
 spec:
   containers:
   - name: app
-    image: nginix
+    image: ngnix
     volumeMounts:
     - name: persistent-storage
       mountPath: /usr/share/nginx/html
