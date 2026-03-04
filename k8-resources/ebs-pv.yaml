@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata: 
-  name : ebs-claim
+  name : ebs-static
 spec: 
   storageClassName: ""
   volumeName: ebs-static
@@ -30,10 +30,10 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: app
+  name: ngnix
 spec:
   containers:
-  - name: app
+  - name: ngnix
     image: ngnix
     volumeMounts:
     - name: persistent-storage
