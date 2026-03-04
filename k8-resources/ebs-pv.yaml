@@ -38,6 +38,8 @@ spec:
     volumeMounts:
     - name: persistent-storage
       mountPath: /usr/share/nginx/html
+  nodeSelector: 
+    topology.kubernetes.io/zone: us-east-1f
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
