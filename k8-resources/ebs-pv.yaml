@@ -30,11 +30,11 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ngnix
+  name: nginx
 spec:
   containers:
-  - name: ngnix
-    image: ngnix
+  - name: nginx
+    image: nginx:latest
     volumeMounts:
     - name: persistent-storage
       mountPath: /usr/share/nginx/html
