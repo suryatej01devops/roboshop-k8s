@@ -32,7 +32,7 @@ kind: Pod
 metadata:
   name: nginx
 spec:
-  containers:
+  containers:   
   - name: nginx
     image: nginx:latest
     volumeMounts:
