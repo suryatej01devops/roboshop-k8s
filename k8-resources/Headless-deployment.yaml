@@ -15,18 +15,13 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx
+        labels: 
+        purpose: dp-demo-headless-service
+        project: roboshop
     spec:
       containers:
       - name: nginx
         image: nginx:latest
-        volumeMounts:
-        - name: persistent-storage
-          mountPath: /usr/share/nginx/html
-      volumes:
-      - name: persistent-storage
-        persistentVolumeClaim:
-          claimName: ebs-dynamic
 ---
 apiVersion: v1
 kind: Service
@@ -46,13 +41,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx
-  labels :
-    purpose: dp-demo-headless-service
-    project: roboshop
 spec:
   clusterIP: None
   selector:
-    purpose: dp-demo
+    purpose: dp-demo--headless-service
     project: roboshop
   ports:
     - protocol: TCP
