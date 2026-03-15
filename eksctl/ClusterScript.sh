@@ -4,7 +4,7 @@
 CLUSTER_NAME="roboshop-dev"
 REGION="us-east-1"
 NODEGROUP_NAME="roboshop-dev"
-INSTANCE_TYPE="m7i-flex.large"
+INSTANCE_TYPE="t3.micro"
 DESIRED_CAPACITY=6
 
 echo "Creating EKS cluster configuration file..."
